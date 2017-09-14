@@ -1,6 +1,6 @@
 source 'https://rubygems.org/'
 
-gem 'rails', '~> 5.0.0'
+gem 'rails', '~> 5.1.4'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
@@ -13,13 +13,13 @@ group :development do
 end
 
 group :development, :test do
-  gem 'capybara'
-  gem 'factory_girl_rails'
-  gem 'launchy', require: false
   gem 'pry-rails'
-  gem 'rspec-rails', '~> 3.5'
-  gem 'shoulda'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'factory_girl'
   gem 'valid_attribute'
+  gem 'shoulda-matchers', require: false
 end
 
 group :production do

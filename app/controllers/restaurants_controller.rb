@@ -12,7 +12,7 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.new(restaurant_params)
 
     if @restaurant.save
-      flash[:success] = 'Restaurant added successfully'
+      flash[:success] = 'Restaurant added successfully!'
     else
       render action: 'new'
     end

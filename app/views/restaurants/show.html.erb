@@ -1,1 +1,6 @@
-<h1>It is Working!</h1>
+<% flash.each do |key, value| %>
+  <%= value %>
+<% end %>
+
+<h2>Restaurant Name: <%= @restaurant.name %></h2>
+<h2>Description: <%= @restaurant.description %></h2>

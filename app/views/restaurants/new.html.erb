@@ -1,3 +1,9 @@
+<% unless @restaurant.errors.empty? %>
+  <div>
+    <%= @restaurant.errors.full_messages.to_sentence %>
+  </div>
+<% end %>
+
 <h1>New Restaurant Form</h1>
 
 <%= form_for(@restaurant) do |f| %>

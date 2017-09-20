@@ -9,7 +9,7 @@ require "rails_helper"
 feature "visitors can add restaurants" do
   scenario "visitor adds new restaurant successfully" do
 
-    visit new_restaurants_path
+    visit new_restaurant_path
     expect(page).to have_content "New Restaurant Form"
 
     fill_in 'Name', with: "Figaro's"
@@ -21,12 +21,13 @@ feature "visitors can add restaurants" do
 
     click_button "Add Restaurant"
 
-    expect(page).to have_content "Restaurant added successfully"
+    expect(page).to have_content "Restaurant added successfully!"
     expect(page).to have_content "Figaro's"
     expect(page).to have_content "This old-school-style Italian deli serves breakfast fare & a range of sandwiches, roll-ups & salads."
   end
 
   scenario "visitor doesn't fill out new restaurant form correctly" do
+    visit new_restaurant_path
     click_button "Add Restaurant"
 
     expect(page).to have_content "Name can't be blank"

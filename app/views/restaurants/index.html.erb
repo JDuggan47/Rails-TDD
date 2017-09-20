@@ -1,4 +1,6 @@
 <h1>Checkout the Restaurants!</h1>
+<% @restaurants.each do |restaurant| %>
+  <%= link_to restaurant.name, restaurant_path(restaurant)%>
+<% end %>
 
-
-<%=  link_to 'New Restaurant Form', new_restaurant_path%>
+<%=  link_to 'Add Restaurant', new_restaurant_path%>
